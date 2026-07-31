@@ -16,31 +16,37 @@ export default function App() {
 
       <ScrollView style={styles.box2} contentContainerStyle={styles.cardsContainer}>
 
-        <View style={styles.card}>
+<View style={styles.card}>
           <Image 
             style={styles.cardImage} 
-            source={{ uri: 'https://picsum.photos/300/150' }} 
+            source={{ uri: 'https://s2.glbimg.com/63hqcNFjh5efwqCFyBqqBCVyPkLYffw3GZZAjbxSJutIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/10/23/rayssa2.jpg' }} 
           />
-          <Text style={styles.cardTitle}>Ana Julia</Text>
-          <Text style={styles.cardDescription}>ana@gmail.com</Text>
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Beatriz Órfã</Text>
+            <Text style={styles.cardDescription}>bia@gmail.com</Text>
+          </View>
         </View>
 
         <View style={styles.card}>
           <Image 
             style={styles.cardImage} 
-            source={{ uri: 'https://picsum.photos/300/150' }} 
+            source={{ uri: 'https://img.observatoriodatv.com.br/wp-content/uploads/2020/12/thiago-pedro-henrique-chiquititas.jpg' }} 
           />
-          <Text style={styles.cardTitle}>Joao</Text>
-          <Text style={styles.cardDescription}>joao@gmail.com</Text>
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Thiago Órfã</Text>
+            <Text style={styles.cardDescription}>thiago@gmail.com</Text>
+          </View>
         </View>
 
         <View style={styles.card}>
           <Image 
             style={styles.cardImage} 
-            source={{ uri: 'https://picsum.photos/300/150' }} 
+            source={{ uri: 'https://ofuxico.com.br/img/upload/novelas_interna/2021/05/17/marian-chiquititas_19386_76.jpg' }} 
           />
-          <Text style={styles.cardTitle}>Carla</Text>
-          <Text style={styles.cardDescription}>carla@gmail.com</Text>
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Marian Órfã</Text>
+            <Text style={styles.cardDescription}>mari@gmail.com</Text>
+          </View>
         </View>
 
       </ScrollView>
@@ -59,13 +65,13 @@ const styles = StyleSheet.create({
     height: 100,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#345678',
+    backgroundColor: '#222222',
     padding: 20,
     gap: 20
   },
   box2: {
     flex: 1,
-    backgroundColor: '#5fbb21'
+    backgroundColor: '#182446'
   },
   cardsContainer: {
     padding: 20, 
@@ -73,6 +79,8 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: '#ffffff',
+    height: 100,
+    width: '100%',
     borderRadius: 12,     
     padding: 16,   
     flexDirection: 'row', 
@@ -80,10 +88,12 @@ const styles = StyleSheet.create({
     gap: 15,         
   },
   cardImage: {
-    width: '100%',        
-    height: 150,          
-    borderRadius: 8,   
-    marginBottom: 10,    
+    width: 60,       
+    height: 60,      
+    borderRadius: 30,     
+  },
+  cardContent: {
+    justifyContent: 'center', 
   },
   cardTitle: {
     fontSize: 18,
