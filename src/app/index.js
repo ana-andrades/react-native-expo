@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { Link } from 'expo-router';
 
 export default function App() {
   return (
@@ -10,6 +13,10 @@ export default function App() {
           source={'https://reactnative.dev/img/tiny_logo.png'}
         />
         <Text style={styles.textLogo}>Orfanato Raio de Luz</Text>
+        <Link style={styles.iconUser}href="/contact">
+          <FontAwesome6 name="user-plus" size={24} color="white" />
+          <Ionicons name="settings-sharp" size={28} color="white" />
+        </Link>
       </View>
 
       <ScrollView style={styles.box2} contentContainerStyle={styles.cardsContainer}>
@@ -111,5 +118,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
-  }
+  },
+  iconUser: {
+    marginLeft: 'auto',
+    padding: 15,
+
+  },
 });
