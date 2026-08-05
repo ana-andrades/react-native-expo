@@ -15,6 +15,8 @@ export default function App() {
         <Text style={styles.textLogo}>Orfanato Raio de Luz</Text>
         <Link style={styles.iconUser}href="/contact">
           <FontAwesome6 name="user-plus" size={24} color="white" />
+        </Link>
+        <Link style={styles.iconSettings}href="/settings">
           <Ionicons name="settings-sharp" size={28} color="white" />
         </Link>
       </View>
@@ -122,6 +124,9 @@ const styles = StyleSheet.create({
   iconUser: {
     marginLeft: 'auto',
     padding: 15,
-
+  },
+  iconSettings: {
+    marginLeft: 'auto',
+    padding: 15,
   },
 });
