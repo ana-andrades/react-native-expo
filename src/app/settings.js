@@ -9,13 +9,16 @@ export default function ContactScreen() {
 
   return (
     <View style={styles.container}>
+      
       <View style={styles.box}>
         <Image
           style={styles.tinyLogo}
           source={'https://reactnative.dev/img/tiny_logo.png'}
         />
         <Text style={styles.textLogo}>Orfanato Raio de Luz</Text>
-        <FontAwesome style={styles.iconHome} name="home" size={32} color="white" onPress={() => router.push('/')} />
+        <View style={styles.iconContainer}>
+          <FontAwesome name="home" size={32} color="white" onPress={() => router.push('/')} />
+        </View>
       </View>
 
       <ScrollView style={styles.box2} contentContainerStyle={styles.cardsContainer}>
@@ -118,7 +121,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-  iconHome: {
+  iconContainer: {
     marginLeft: 'auto',
+    marginRight: 15,
   }
 });

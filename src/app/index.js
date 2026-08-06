@@ -8,17 +8,22 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
+
         <Image
           style={styles.tinyLogo}
           source={'https://reactnative.dev/img/tiny_logo.png'}
         />
         <Text style={styles.textLogo}>Orfanato Raio de Luz</Text>
-        <Link style={styles.iconUser}href="/contact">
-          <FontAwesome6 name="user-plus" size={24} color="white" />
-        </Link>
-        <Link style={styles.iconSettings}href="/settings">
-          <Ionicons name="settings-sharp" size={28} color="white" />
-        </Link>
+        
+        <View style={styles.iconContainer}>
+          <Link href="/contact">
+            <FontAwesome6 name="user-plus" size={24} color="white" />
+          </Link>
+          <Link href="/settings">
+            <Ionicons name="settings-sharp" size={28} color="white" />
+          </Link>
+        </View>
+
       </View>
 
       <ScrollView style={styles.box2} contentContainerStyle={styles.cardsContainer}>
@@ -121,12 +126,10 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-  iconUser: {
+  iconContainer: {
+    flexDirection: 'row',
     marginLeft: 'auto',
-    padding: 15,
-  },
-  iconSettings: {
-    marginLeft: 'auto',
-    padding: 15,
-  },
+    gap: 15,
+    marginRight: 15,
+  }
 });
