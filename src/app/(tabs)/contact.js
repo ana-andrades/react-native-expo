@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useRouter } from 'expo-router';
 
@@ -50,9 +50,10 @@ export default function ContactScreen() {
           <View style={styles.cardContent}>
             <Text style={styles.cardTitle}>Marian</Text>
             <Text style={styles.cardDescription}>mari@gmail.com</Text>
-          </View>
+          </View>           
         </View>
 
+      <Button title="Logout" onPress={() => router.replace('/')} />
       </ScrollView>
 
       <StatusBar style="auto" />
@@ -119,6 +120,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   iconHome: {
+    flexDirection: 'row',
     marginLeft: 'auto',
+    gap: 15,
+    marginRight: 15,
   }
 });
